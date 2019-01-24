@@ -1,8 +1,8 @@
 <h1>Address Book</h1>
 
 <app-contactlist *ngIf="!selectedContact" (clickEditContact)="editContact($event)" [childContactList]="MasterListofContacts"
-    [notesColor]="notesColor"></app-contactlist>
+[notesColor]="notesColor"></app-contactlist>
 <app-editcontact *ngIf="selectedContact" [contact]="selectedContact" (clickSender)="finishedEditing()" [notesColor]="notesColor"></app-editcontact>
 
 
-<app-newcontact></app-newcontact>
+<app-newcontact (clickSaveContact)="saveNewContact($event)"></app-newcontact>

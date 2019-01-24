@@ -1,3 +1,16 @@
-<p>
-  newcontact works!
-</p>
+<button>Add New Contact!</button>
+<div>
+    <h3>Add Contact Details:</h3>
+    <label>Enter new Name:</label>
+    <input #name>
+    <br>
+    <label>Enter new address:</label>
+    <input #address>
+    <br>
+    <label>Enter new Phone Number:</label>
+    <input #phoneNumber>
+    <br>
+    <label>Enter new note:</label>
+    <input #note>
+    <button (click)="clickSave(name.value, address.value, phoneNumber.value, note.value)" >Save</button>
+  </div>

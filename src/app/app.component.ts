@@ -9,6 +9,12 @@ import { Contact } from './models/contact.model';
 export class AppComponent {
   title = 'app';
   selectedContact = null;
+  // tempName = "";
+  // tempAddress = "";
+  // tempPhone = 0;
+  // tempNote = "";
+  // createdContact = new Contact(this.tempName, this.tempAddress, this.tempPhone, this.tempNote);
+
 
   MasterListofContacts: Contact[] = [
     new Contact("Kenny", "Seattle", 123, "Epicodus"),
@@ -33,4 +39,11 @@ export class AppComponent {
   finishedEditing() {
     this.selectedContact = null;
   }
+
+  saveNewContact(contact) {
+
+  this.MasterListofContacts.push(contact);
+  
+  }
+
 }

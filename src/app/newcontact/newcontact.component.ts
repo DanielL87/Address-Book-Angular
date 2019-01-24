@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Contact } from '../models/contact.model';
 
 @Component({
   selector: 'app-newcontact',
@@ -8,6 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class NewcontactComponent implements OnInit {
 
   constructor() { }
+
+  @Input () saveNewContact;
+
+  @Output() clickSaveContact = new EventEmitter();
+
+  clickSave(name, address, phoneNumber, note) {
+    let newContact = new Contact(name, address, phoneNumber, note)
+    this.clickSaveContact.emit(newContact);
+  }
+
 
   ngOnInit() {
   }
