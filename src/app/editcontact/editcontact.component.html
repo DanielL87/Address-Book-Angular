@@ -1,0 +1,12 @@
+<div>
+  <app-contact [contact]="contact" [notesColor]="notesColor"></app-contact>
+  <h3>Edit Contact</h3>
+  <label>Enter new Name:</label>
+  <input [(ngModel)]="contact.name">
+  <label>Enter new address:</label>
+  <input [(ngModel)]="contact.address">
+  <br>
+  <label>Enter new note:</label>
+  <input [(ngModel)]="contact.note">
+  <button (click)="editButtonClicked()">Done</button>
+</div>

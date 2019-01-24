@@ -1,0 +1,8 @@
+<ul>
+
+  <div *ngFor="let currentContact of childContactList" [class]="notesColor(currentContact)" class="card" style="width: 18rem;">
+    <app-contact [contact]="currentContact" [notesColor]="notesColor"></app-contact>
+    <button (click)="clickEdit(currentContact)">Edit</button>
+
+  </div>
+</ul>
