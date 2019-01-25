@@ -9,6 +9,7 @@ import { Contact } from './models/contact.model';
 export class AppComponent {
   title = 'app';
   selectedContact = null;
+  selectedNewContact = true;
   // tempName = "";
   // tempAddress = "";
   // tempPhone = 0;
@@ -41,9 +42,11 @@ export class AppComponent {
   }
 
   saveNewContact(contact) {
-
   this.MasterListofContacts.push(contact);
-  
   }
 
+  addContactClicked(){
+    this.selectedNewContact = !this.selectedNewContact;
+    console.log(this.selectedNewContact);
+  }
 }
